@@ -43,7 +43,8 @@ export function ProjectsSection() {
       image: "https://wallpapers.com/images/high/simple-desktop-racing-planes-ajcnliskttbq1ti3.webp",
       dataAiHint: "labubu order tracker",
       github: "https://github.com/monteirok/labubu-order-tracker",
-      live: "https://labubu.karstenmonteiro.com",
+      live: "https://labubu-order-tracker.vercel.app/",
+      // live: "https://labubu.karstenmonteiro.com",
     },
     {
       title: "e-Commerce Website",
