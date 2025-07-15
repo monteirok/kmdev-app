@@ -40,6 +40,10 @@
   }
 }
 
+* {
+  user-select: none !important;
+}
+
 html {
   scroll-behavior: smooth;
 }
