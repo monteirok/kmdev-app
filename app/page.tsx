@@ -60,8 +60,8 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-black text-white">
       {/* <Navbar /> */}
-      <div className="pt-[.6rem] pl-[1.4rem] border-2w-fit">
-        <Logo width={200} height={200} />
+      <div className="fixed top-4 left-4 z-50">
+        <Logo width={60} height={60} />
       </div>
       <HamburgerMenu />
       <HeroSection />

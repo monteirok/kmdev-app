@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { Github, ExternalLink } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Badge } from "@/components/ui/badge";
@@ -26,7 +26,7 @@ export const BentoGridItem = ({
   github,
   live,
 }: BentoGridItemProps) => {
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
     show: { opacity: 1, y: 0, transition: { type: 'spring', stiffness: 100, duration: 0.15 } },
   };
@@ -41,7 +41,7 @@ export const BentoGridItem = ({
     <motion.div
       variants={itemVariants}
       whileHover={hoverVariant}
-      className={cn("relative flex flex-col justify-between h-full p-0 overflow-hidden rounded-lg group bg-card border", className)}
+      className={cn("relative flex flex-col justify-between h-full p-0 overflow-hidden rounded-lg group bg-gray-900 border border-gray-800", className)}
     >
       {/* <Link href={live} target="_blank" rel="noopener noreferrer" className="absolute inset-0 z-10" aria-label={`View ${title} live project`}></Link> */}
       
@@ -69,9 +69,11 @@ export const BentoGridItem = ({
           <Link href={github} target="_blank" rel="noopener noreferrer" className="relative z-30 p-2 transition-colors rounded-full bg-black/30 hover:bg-white/20" aria-label={`${title} GitHub`}>
             <Github className="w-5 h-5 text-white" />
           </Link>
-          <Link href={live} target="_blank" rel="noopener noreferrer" className="relative z-30 p-2 transition-colors rounded-full bg-black/30 hover:bg-white/20" aria-label={`${title} live project`}>
-            <ExternalLink className="w-5 h-5 text-white" />
-          </Link>
+          {live && (
+            <Link href={live} target="_blank" rel="noopener noreferrer" className="relative z-30 p-2 transition-colors rounded-full bg-black/30 hover:bg-white/20" aria-label={`${title} live project`}>
+              <ExternalLink className="w-5 h-5 text-white" />
+            </Link>
+          )}
         </div>
       </div>
     </motion.div>

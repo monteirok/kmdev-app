@@ -7,6 +7,9 @@
 /.next/
 /out/
 
+# misc.
+/.vscode
+
 # production
 /build
 
@@ -18,9 +21,6 @@ yarn-error.log*
 
 # env files
 .env*
-
-# vercel
-.vercel
 
 # typescript
 *.tsbuildinfo

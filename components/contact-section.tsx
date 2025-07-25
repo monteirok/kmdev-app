@@ -6,7 +6,7 @@ export function ContactSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <p className="text-gray-400 text-sm font-medium tracking-wide uppercase mb-4">CONTACT —</p>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Look Who's Here 😊</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Look Who&apos;s Here 😊</h2>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-4xl mx-auto">
@@ -80,12 +80,12 @@ export function ContactSection() {
         </div>
 
         {/* Additional Info */}
-        <div className="text-center mt-16 p-8 backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl shadow-2xl">
+        <div className="text-center mt-16 p-8 backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl shadow-2xl relative">
           <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent opacity-50 rounded-2xl"></div>
           <div className="relative z-10">
             <h3 className="text-2xl font-bold text-white mb-4">Ready to collaborate?</h3>
             <p className="text-gray-400 max-w-2xl mx-auto">
-              I'm always interested in new opportunities and exciting projects. Whether you're looking for a full-time
+              I&apos;m always interested in new opportunities and exciting projects. Whether you&apos;re looking for a full-time
               developer, freelance work, or just want to connect, feel free to reach out!
             </p>
           </div>

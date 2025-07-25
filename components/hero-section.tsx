@@ -42,7 +42,7 @@ export function HeroSection() {
               <div className="space-y-2">
                 {/* <p className="text-2xl md:text-3xl font-semibold text-gray-300">IT / SOFTWARE DEVELOPER 💻</p> */}
                 <p className="text-lg text-gray-400 max-w-lg">
-                  I'm a passionate full-stack developer based in Canada.
+                  I&apos;m a passionate full-stack developer based in Canada.
                 </p>
               </div>
             </div>
@@ -60,7 +60,7 @@ export function HeroSection() {
             <div className="relative w-full h-96">
               {/* Large Letters */}
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-9xl font-bold opacity-10 text-gradient bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+                <div className="text-9xl font-bold opacity-10 bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
                   KM
                 </div>
               </div>

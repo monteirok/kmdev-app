@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState, useMemo } from "react"
 import { BentoGrid } from "./bento-box/bento-grid"
 import { BentoGridItem } from "./bento-box/bento-grid-item"
 
@@ -14,24 +14,24 @@ function shuffle<T>(array: T[]): T[] {
 }
 
 export function ProjectsSection() {
-  const gridSpanOptions = [
+  const gridSpanOptions = useMemo(() => [
     "md:col-span-2 md:row-span-2",
     "md:col-span-1 md:row-span-2",
     "md:col-span-2 md:row-span-1",
     "md:col-span-1 md:row-span-1",
-  ];
+  ], []);
 
   const [shuffledSpans, setShuffledSpans] = useState(gridSpanOptions);
 
   useEffect(() => {
     // Shuffle immediately for faster effect
     setShuffledSpans(shuffle([...gridSpanOptions]));
-  }, []);
+  }, [gridSpanOptions]);
 
   const featuredProjects = [
     {
       title: "Mountain Mixology",
-      techStack: ["Next,js", "Node.js", "TypeScript", "TailwindCSS v4”, “Framer Motion"],
+      techStack: ["Next.js", "Node.js", "TypeScript", "TailwindCSS v4", "Framer Motion"],
       image: "https://wallpapers.com/images/high/simple-desktop-racing-planes-ajcnliskttbq1ti3.webp",
       dataAiHint: "cocktail catering",
       github: "https://github.com/monteirok/kmdev-next",
@@ -39,7 +39,7 @@ export function ProjectsSection() {
     },
     {
       title: "Labubu Order/Sales Tracker",
-      techStack: ["Next,js", "Node.js", "TypeScript", "TailwindCSS v4”, “Framer Motion"],
+      techStack: ["Next.js", "Node.js", "TypeScript", "TailwindCSS v4", "Framer Motion"],
       image: "https://wallpapers.com/images/high/simple-desktop-racing-planes-ajcnliskttbq1ti3.webp",
       dataAiHint: "labubu order tracker",
       github: "https://github.com/monteirok/labubu-order-tracker",
@@ -47,7 +47,7 @@ export function ProjectsSection() {
     },
     {
       title: "e-Commerce Website",
-      techStack: ["Next,js", "Node.js", "TypeScript", "TailwindCSS v4”, “Framer Motion"],
+      techStack: ["Next.js", "Node.js", "TypeScript", "TailwindCSS v4", "Framer Motion"],
       image: "https://wallpapers.com/images/high/simple-desktop-racing-planes-ajcnliskttbq1ti3.webp",
       dataAiHint: "e-commerce",
       github: "https://github.com/monteirok/taba-squishy-ecommerce-store",
@@ -69,9 +69,15 @@ export function ProjectsSection() {
 
   return (
     <section id="projects" className="py-20 bg-black">
-      <div className="flex justify-center items-center w-full">
-        <div className="w-full max-w-7xl px-4">
-          <BentoGrid>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <p className="text-gray-400 text-sm font-medium tracking-wide uppercase mb-4">PORTFOLIO —</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Featured Projects</h2>
+          <p className="text-gray-400 max-w-2xl mx-auto">
+            A collection of projects showcasing my skills in full-stack development, modern frameworks, and creative problem-solving.
+          </p>
+        </div>
+        <BentoGrid>
             {featuredProjects.map((item, i) => (
               <BentoGridItem
                 key={i}
@@ -85,7 +91,6 @@ export function ProjectsSection() {
               />
             ))}
           </BentoGrid>
-        </div>
       </div>
     </section>
   )
